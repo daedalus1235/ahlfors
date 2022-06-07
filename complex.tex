@@ -19,31 +19,197 @@ From the binomial expansion of the LHS, and cancelling odd powers of \(i\),
 \[\left(\frac{\pm1\mp i\sqrt{3}}{2}\right)^6=\frac{1}{64}-\frac{6\sqrt{3}}{64}i-\frac{45}{64}+\frac{60\sqrt{3}}{64}i+\frac{135}{64}-\frac{54\sqrt{3}}{64}i-\frac{27}{64}\]
 \subsection{Square Roots}
 \subsubsection{}
-\[a^2-b^2=0\quad 2ab=1\then a=b=\pm\frac{1}{\sqrt{2}}\then \sqrt{i} = \pm\left(\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\]
-\[a^2-b^2=0\quad 2ab=-1\then a=b=\pm\frac{i}{\sqrt{2}}\then \sqrt{-i} = \pm \left(-\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\]
-sub \(b=1/2a\) so
+\begin{enumerate}[label = (\alph*)]
+	\item
+		\[a^2-b^2=0\quad 2ab=1\then a=b=\pm\frac{1}{\sqrt{2}}\then \sqrt{i} = \pm\left(\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\]
+	\item
+		\[a^2-b^2=0\quad 2ab=-1\then a=b=\pm\frac{i}{\sqrt{2}}\then \sqrt{-i} = \pm \left(-\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\]
+		\item 
+			sub \(b=1/2a\) so
 \[a^2 = \frac{1}{2}\pm\frac{1}{\sqrt{2}}\]
 \[b^2 = -\frac{1}{2}\pm\frac{1}{2}\sqrt{2}\]
 enforcing the condition that
 \[ab = \frac{1}{2}\]
 we obtain
 \[\pm \left(\sqrt{\frac{1}{2}+\frac{1}{\sqrt{2}}}+i\sqrt{-\frac{1}{2}+\frac{1}{\sqrt{2}}}\right)\]
-I really cannot be bothered to do this\ldots
+\item I really cannot be bothered to do this\ldots
+	\[a^2-b^2 = \frac{1}{2}\qquad ab = \frac{\sqrt{3}}{4}\]
+	\[(a^2-b^2)^2 = \frac{1}{4}\qquad (a^2+b^2)^2 = 1\]
+	\[a^2 = \frac{3}{4}\qquad\qquad b^2 = \frac{1}{4}\]
+	Thus,
+	\[\sqrt{\frac{1-i\sqrt{3}}{2}} = \pm\left(\frac{\sqrt{3}}{2}-\sqrt{i}{2}\right)\]
+\end{enumerate}
 \subsubsection{}
 Cuz i'm lazy:
 \[\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}},-\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}},-\frac{1}{\sqrt{2}}-\frac{i}{\sqrt{2}},\frac{1}{\sqrt{2}}-\frac{i}{\sqrt{2}}\]
 \subsubsection{}
 do i really have to
-using the fact that \(\sqrt{i} = \pm\left(\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\) and \(i^4=1\),
-\[\sqrt{\sqrt{i}}=\sqrt{\frac{1}{2\sqrt{2}}+\frac{1}{2}+}+i\sqrt{-\frac{1}{2\sqrt{2}}+\frac{1}{2}}\]
-multiplying by \(i,i^2,i^3\), we obtain the other three solutions.
-\hfuzz=10pt
-\[-\sqrt{\frac{1}{2\sqrt{2}}+\frac{1}{2}+}+i\sqrt{-\frac{1}{2\sqrt{2}}+\frac{1}{2}},-\sqrt{\frac{1}{2\sqrt{2}}+\frac{1}{2}+}-i\sqrt{-\frac{1}{2\sqrt{2}}+\frac{1}{2}},\sqrt{\frac{1}{2\sqrt{2}}+\frac{1}{2}+}-i\sqrt{-\frac{1}{2\sqrt{2}}+\frac{1}{2}}\]
 
+using the fact that \(\sqrt{i} = \pm\left(\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}\right)\), \(\sqrt{i} = \mp\frac{1}{\sqrt{2}}\pm\frac{i}{\sqrt{2}}\), and \(i^4=1\),
+\[\sqrt{\sqrt{\pm i}}=a_\pm+ib_\pm\then a_\pm^2-b_\pm^2 = \frac{1}{\sqrt{2}}\qquad a_\pm b_\pm=\frac{1}{2\sqrt{2}}\]
+\[a^4_\pm - 2a_\pm^2b_\pm^2 + b_\pm^4 = \frac{1}{2}\then (a_\pm^2+b_\pm^2)^2 = 1\then a_\pm^2+b_\pm^2=1\]
+\[\then a_\pm^2 = \frac{1}{2}+\frac{1}{2\sqrt{2}}\qquad b_\pm^2 = \frac{1}{2}-\frac{1}{2\sqrt{2}}\]
+\begin{align*}
+	\sqrt{\sqrt{i}}&= \sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}+i\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}},\, -\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}}+i\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}},\\
+		       &\quad-\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}-i\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}},\,\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}}-i\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}\\
+	\sqrt{\sqrt{-i}}&= -\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}+i\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}},\, -\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}}-i\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}},\\
+		       &\quad\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}-i\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}},\,\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}}+i\sqrt{\frac{1}{2}+\frac{1}{2\sqrt{2}}}\\
+\end{align*}
+\subsubsection{}
+are you serious
 
+Plugging into the quadratic formula,
+\[z=\frac{-\alpha-i\beta\pm\sqrt{\alpha^2-\beta^2+i2\alpha\beta - 4\gamma - i4\delta}}{2}\]
+Taking the square root,
+\[a^2-b^2=\alpha^2-\beta^2-4\gamma\]
+\[ab = \alpha\beta - 2\delta\]
+\[(a^2-b^2)^2 = \alpha^4+\beta^4+16\gamma^2-2\alpha^2\beta^2-8\alpha^2\gamma+8\beta^2\gamma\]
+\[a^2b^2 = \alpha^2\beta^2+4\delta^2-4\alpha\beta\delta\]
+\[(a^2+b^2)^2 = \alpha^4+\beta^4+16\gamma^2 + 2\alpha^2\beta^2-8\alpha^2\gamma + 8\beta^2\gamma + 16\delta^2 - 16\alpha\beta\delta\]
+
+\[a=\frac{\sqrt{\alpha^2-\beta^2-4\gamma + \sqrt{(\alpha^2+\beta^2)^2+8\gamma(2\gamma - a^2+\beta^2) + 16\delta(\delta-\alpha\beta)}}}{2}\]
+\[b=\frac{\sqrt{-\alpha^2+\beta^2+4\gamma + \sqrt{(\alpha^2+\beta^2)^2+8\gamma(2\gamma - a^2+\beta^2) + 16\delta(\delta-\alpha\beta)}}}{2}\]
+for
+\[z = \frac{-\alpha\pm 2a}{2} -i \frac{\beta\pm 2b}{2}\]
+where i literally cannot be bothered to try and fit the above in one single expression.
 
 \subsection{Justification}
+\subsubsection{}
+Let capital members denote matrices and lower case members denote complex numbers. For a relation \(f:Z\mapsto z\) to be a homomomorphism it must obey \(f(E_+) = e_+\) and \(f(E_\times) = e_\times\), that is, we must have
+\[f\left[\begin{pmatrix}0&0\\0&0\end{pmatrix}\right] = 0\quad f\left[\begin{pmatrix}1&0\\0&1\end{pmatrix}\right] = 1\]
+Further, we use the fact that
+\[\begin{pmatrix}
+	0&1\\-1&0
+\end{pmatrix} \begin{pmatrix}
+	0&1\\-1&0
+\end{pmatrix} = \begin{pmatrix}
+	1&0\\0&1
+\end{pmatrix}\]
+to fix 
+\[f\left[ \begin{pmatrix}
+		0&1\\-1&0
+\end{pmatrix}\right]=i\]
+arbitrarily. We can thus identify 
+\[f\left[ \begin{pmatrix}
+		\alpha &\beta\\-\beta&\alpha
+\end{pmatrix}\right] = \alpha+i\beta\]
+with the inverse map
+\[f^{-1}[\alpha+i\beta] = \begin{pmatrix}
+	\alpha & \beta \\ -\beta & \alpha
+\end{pmatrix}\]
+We show that this is a field homomorphism. Let \(f(Z) = \alpha+i\beta\) and \(f(W) = \gamma+i\delta\). Then,
+\begin{align*}
+	f(Z+W) &= f\left[ \begin{pmatrix}
+		\alpha & \beta\\
+		-\beta & \alpha
+	\end{pmatrix}+ \begin{pmatrix}
+		\gamma & \delta\\
+		-\delta & \gamma
+	\end{pmatrix}\right] \\
+	&= f\left[ \begin{pmatrix}
+		\alpha+\gamma & \beta + \delta \\
+		-(\beta + \delta) & \alpha + \delta
+	\end{pmatrix}\right]\\
+	&= (\alpha+\gamma)+i(\beta+\delta) \\
+	&= (\alpha+i\beta)+(\gamma+i\delta) \\
+	&= f(Z)+f(W)
+\end{align*}
+thus addition is respected. Similarly,
+\begin{align*}
+	f(ZW) &= f\left[ \begin{pmatrix}
+		\alpha & \beta\\
+		-\beta & \alpha
+	\end{pmatrix} \begin{pmatrix}
+		\gamma & \delta\\
+		-\delta & \gamma
+	\end{pmatrix}\right] \\
+	&= f\left[ \begin{pmatrix}
+		\alpha\gamma-\beta\delta & \alpha\delta + \beta\gamma\\
+		-(\alpha\gamma+\beta\delta) & \alpha\gamma + \beta\gamma
+	\end{pmatrix}\right]\\
+	&=(\alpha\gamma-\beta\delta)+i(\alpha\delta+\beta\gamma)\\
+	&=(\alpha + i\beta)(\gamma+i\delta)\\
+	&= f(Z)f(W)
+\end{align*}
+thus multiplication is also respected. Thus, \(f\) is a field homomorphism.
+
+We can further see that \(f\) is a bijection; it is a surjection because all \(z\in\C\) can be written \(z=\alpha+i\beta\) for \(\alpha,\beta\in \R\), and it clearly an injection because \(f(Z)=f(W)\implies f(Z)-f(W)=0\implies f(Z-W)=0\implies Z-W=0\implies Z=W\). 
+
+Thus, as \(f\) is a field homomorphism and a bijection, it is an isomorphism, and these matrices equiped with matrix addition and matrix multiplication is isomorphic to the complex field. 
+\subsubsection{}
+I have no idea what this means
 \subsection{Conjugation, Absolute Value}
+\subsubsection{}
+\begin{align*}
+	\frac{z}{z^2+1}&= \frac{x+iy}{x^2-y^2+i2xy+1}\\
+		       &=\frac{x^3-xy^2-2xy^2+x+i(x^2y-y^3-2x^2y+y)}{x^4-6x^2y^2 + y^4+x^2-y^2+1}\\
+	\frac{\bar z}{\bar z^2+1}&= \frac{x-iy}{x^2-y^2-i2xy+1}\\
+		       &=\frac{x^3-xy^2-2xy^2+x-i(x^2y-y^3-2x^2y+y)}{x^4-6x^2y^2 + y^4+x^2-y^2+1}\\
+		       &=\overline{\left(\frac{z}{z^2+1}\right)}
+\end{align*}
+\subsubsection{}
+Splitting into terms,
+\begin{enumerate}[label = (\alph*)]
+	\item \(2*\sqrt{10}*\sqrt{20}\sqrt{2}=40\)
+	\item \(5*\sqrt{5}/\sqrt{2}\sqrt{10} = \frac{5}{2}\)
+\end{enumerate}
+\subsubsection{}
+\begin{align*}
+	\abs{\frac{a-b}{1-\bar a b}}&=\frac{a-b}{1-\bar a b}\frac{\bar a - \bar b}{1-a \bar b}\\
+				    &=\frac{\bar a a + \bar b b -\bar a b - a\bar b}{1-\bar a b -a\bar b + \bar a a\bar b b}\\
+				    &=\frac{\abs{a}^2+\abs{b}^2-2\Re{\bar a b}}{1+\abs{a}^2\abs{b}^2 - 2\Re{\bar a b}}
+\end{align*}
+We see that if either \(\abs a = 1\) or \(\abs b = 1\) that the numerator equals the denominator and the fraction cancels. In the case where \(\abs a = \abs b = 1\), the expression still holds so long as \(\Re \bar a b\neq 1\), that is \(a\neq b\).
+\subsubsection{}
+Make the substitution
+\[\alpha = a+b\qquad\qquad \beta = a-b\qquad\then\qquad a = \frac{\alpha+\beta}{2}\qquad\qquad b = \frac{\alpha-\beta}{2}\]
+so
+\[\alpha\Re z + i\beta\Im z = -c\]
+\[\bar \alpha \Re z - i \bar \beta \Im z = -\bar c\]
+Adding,
+\[\Re\alpha \Re z -\Im \beta \Im z = -\Re c\]
+and subtracting,
+\[\Im \alpha\Re z +\Re\beta\Im z = -\Im c\]
+
+Cases:
+if \(\alpha\) is real, 
+\[\Im z = -\frac{\Im c}{\Re \beta}\]
+if \(\alpha\) is imaginary,
+\[\Im z = -\frac{\Re c}{\Im \beta}\]
+if \(\beta\) is real, 
+\[\Re z = -\frac{\Re c}{\Re \alpha}\]
+if \(\beta\) is imaginary,
+\[\Re z = -\frac{\Im c}{\Im\alpha}\]
+Note that there is no solution if one of \(\alpha,\beta\) is real and the other is purly imaginary. Further, if either \(\alpha\) or \(\beta\) is zero, we have either infinitely many solutions, characterized by two parallel lines, or no solutions.
+
+Finally, consider the case where \(\alpha,\beta\) are nonzero and have both imaginary and complex components. Solving,
+\[\Re z = -\frac{\Re \beta\Re c+\Im\beta\Im c}{\Re\alpha\Re\beta +\Im\alpha\Im\beta}\]
+\[\Im z = -\frac{\Re\alpha\Im c -\Im\alpha\Re c}{\Re\alpha\Re\beta + \Im\alpha\Im\beta}\]
+We see there is a unique solution so long as \(\Re\alpha\Re\beta+\Im\alpha\Im\beta\neq 0\), or if \(\alpha,\beta\) are both real or both imaginary.
+
+\subsubsection{}
+Trivially, Lagrange's identity holds for \(n=1\):
+\[\abs{a_1b_1}=\abs{a_1}\abs{b_1}+0\]
+First, note that through multiplying conjugates, we obtain
+\[\sum_{i=1}^{n+1}\abs{a_i\bar b_{n+1}-a_{n+1}\bar b_i}^2=\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2+\abs{a_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n+1}a_ib_i\right]\]
+Thus, if Lagrange's identity holds for some \(n\),
+\begin{align*}
+	\abs{\sum_{i=1}^{n+1}a_ib_i}^2&=\abs{\sum_{i=1}^na_ib_i+a_{n+1}b_{n+1}}^2\\
+				      &=\abs{\sum_{i=1}^{n}a_i b_i}^2 + \abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n}a_ib_i\right]\\
+				      &=
+\end{align*}
+\newpage{}
+\begin{align*}
+	\abs{\sum_{i=1}^{n+1}a_ib_i}^2&=\abs{\sum_{i=1}^na_ib_i+a_{n+1}b_{n+1}}^2\\
+				      &=2\abs{\sum_{i=1}^na_ib_i}^2+2\abs{a_{n+1}}^2\abs{b_{n+1}}^2-\abs{\sum_{i=1}^na_ib_i - a_{n+1}b_{n+1}}^2\\
+				      &=2\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2+2\abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_i\bar b_j}^2\\
+				      &\qquad-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
+				      &=\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2+\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_n}^2+\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_{i}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_j\bar b_i}^2\\
+				      &\quad+\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2-\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_i}^2 -\abs{b_{n+1}}^2\sum_{i=1}^n\abs{a_i}^2-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
+				      &\quad+\abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
+				      &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2+\abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_j\bar b_i}^2\\
+				      &\quad+\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2-\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_i}^2 -\abs{b_{n+1}}^2\sum_{i=1}^n\abs{a_i}^2-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
+\end{align*}
 \subsection{Inequalities}
 \section{The Geometric Representation of Complex Numbers}
 \subsection{Geometric Addition and Multiplication}

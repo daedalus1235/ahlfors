@@ -180,7 +180,7 @@ if \(\beta\) is real,
 \[\Re z = -\frac{\Re c}{\Re \alpha}\]
 if \(\beta\) is imaginary,
 \[\Re z = -\frac{\Im c}{\Im\alpha}\]
-Note that there is no solution if one of \(\alpha,\beta\) is real and the other is purly imaginary. Further, if either \(\alpha\) or \(\beta\) is zero, we have either infinitely many solutions, characterized by two parallel lines, or no solutions.
+Note that there is no solution if one of \(\alpha,\beta\) is real and the other is purly imaginary. Further, if either \(\alpha\) or \(\beta\) is zero, we have either infinitely many solutions, characterized by a line, or no solutions.
 
 Finally, consider the case where \(\alpha,\beta\) are nonzero and have both imaginary and complex components. Solving,
 \[\Re z = -\frac{\Re \beta\Re c+\Im\beta\Im c}{\Re\alpha\Re\beta +\Im\alpha\Im\beta}\]
@@ -191,28 +191,103 @@ We see there is a unique solution so long as \(\Re\alpha\Re\beta+\Im\alpha\Im\be
 Trivially, Lagrange's identity holds for \(n=1\):
 \[\abs{a_1b_1}=\abs{a_1}\abs{b_1}+0\]
 First, note that through multiplying conjugates, we obtain
-\[\sum_{i=1}^{n+1}\abs{a_i\bar b_{n+1}-a_{n+1}\bar b_i}^2=\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2+\abs{a_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n+1}a_ib_i\right]\]
+\[\sum_{i=1}^{n+1}\abs{a_i\bar b_{n+1}-a_{n+1}\bar b_i}^2=\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2+\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n+1}a_ib_i\right]\]
 Thus, if Lagrange's identity holds for some \(n\),
 \begin{align*}
 	\abs{\sum_{i=1}^{n+1}a_ib_i}^2&=\abs{\sum_{i=1}^na_ib_i+a_{n+1}b_{n+1}}^2\\
-				      &=\abs{\sum_{i=1}^{n}a_i b_i}^2 + \abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n}a_ib_i\right]\\
-				      &=
+				      &=\abs{\sum_{i=1}^{n}a_i b_i}^2 + \abs{a_{n+1}}^2\abs{b_{n+1}}^2+2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n}a_ib_i\right]\\
+				      &=\sum_{i=1}^{n}\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2 - \sum_{1\leq i < j \leq n}\abs{a_i\bar b_j - a_j\bar b_i}^2+ \abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
+				      &\qquad+2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n}a_ib_i\right] + \abs{a_{n+1}}^2\sum_{i=1}^n\abs{b_i} +\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2 \\
+				      &\qquad - \abs{a_{n+1}}^2\sum_{i=1}^n\abs{b_i} -\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2- \abs{a_{n+1}}^2\abs{b_{n+1}}^2+ \abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
+				      &=\sum_{i=1}^{n}\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2 + \abs{a_{n+1}}^2\sum_{i=1}^n\abs{b_i}^2 +\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2 \\
+				      &\qquad - \sum_{1\leq i < j \leq n}\abs{a_i\bar b_j - a_j\bar b_i}^2\\
+				      &\qquad -\abs{a_{n+1}}^2\abs{b_{b+1}}^2- \abs{a_{n+1}}^2\sum_{i=1}^n\abs{b_i}^2 -\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_i}^2\\
+				      &\qquad+2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n}a_ib_i\right] +\underbrace{2\abs{a_{n+1}}^2\abs{b_{n+1}}^2}_{=2\Re\left[\bar a_{n+1}\bar b_{n+1}a_{n+1}b_{n+1} \right]}\\
+				      &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2 - \sum_{1\leq i < j \leq n}\abs{a_i\bar b_j - a_j\bar b_i}^2\\
+				      &\qquad -\abs{a_{n+1}}^2\sum_{i=1}^{n+1}\abs{b_i}^2-\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{b_i}^2-2\Re\left[\bar a_{n+1}\bar b_{n+1}\sum_{i=1}^{n+1}a_ib_i\right]\\
+				      &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2 - \sum_{1\leq i < j \leq n}\abs{a_i\bar b_j - a_j\bar b_i}^2 -\sum_{i=1}^{n+1}\abs{a_i\bar b_{n+1}-a_{n+1}\bar b_i}^2\\
+				      &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2 - \sum_{1\leq i < j \leq n+1}\abs{a_i\bar b_j - a_j\bar b_i}^2
 \end{align*}
-\newpage{}
-\begin{align*}
-	\abs{\sum_{i=1}^{n+1}a_ib_i}^2&=\abs{\sum_{i=1}^na_ib_i+a_{n+1}b_{n+1}}^2\\
-				      &=2\abs{\sum_{i=1}^na_ib_i}^2+2\abs{a_{n+1}}^2\abs{b_{n+1}}^2-\abs{\sum_{i=1}^na_ib_i - a_{n+1}b_{n+1}}^2\\
-				      &=2\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2+2\abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_i\bar b_j}^2\\
-				      &\qquad-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
-				      &=\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2+\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_n}^2+\abs{b_{n+1}}^2\sum_{i=1}^{n+1}\abs{a_{i}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_j\bar b_i}^2\\
-				      &\quad+\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2-\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_i}^2 -\abs{b_{n+1}}^2\sum_{i=1}^n\abs{a_i}^2-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
-				      &\quad+\abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
-				      &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2+\abs{a_{n+1}}^2\abs{b_{n+1}}^2-2\sum_{1\leq i<j\leq n}\abs{a_i \bar b_j-a_j\bar b_i}^2\\
-				      &\quad+\sum_{i=1}^n\abs{a_i}^2\sum_{i=1}^n\abs{b_i}^2-\abs{a_{n+1}}^2\sum_{i=1}^{n}\abs{b_i}^2 -\abs{b_{n+1}}^2\sum_{i=1}^n\abs{a_i}^2-\abs{\sum_{i=1}^na_ib_i-a_{n+1}b_{n+1}}^2\\
-\end{align*}
+it also holds for \(n+1\). Thus, Lagrange's identity holds for all \(n\in \N\).
 \subsection{Inequalities}
+\subsubsection{}
+From 1.1.4.3, we can write
+\begin{align*}
+	\abs{\frac{a-b}{1-\bar a b}}&=\frac{\abs{a}^2 + \abs b^2 - 2\Re\bar a b}{1+\abs a ^2 \abs b ^2 - 2\Re\bar a b}\\
+				    &=
+\end{align*}
+\subsubsection{}
+Cauchy's inequality holds as an equality for \(n=1\):
+\[\abs{a_1b_1}^2=\abs{a_1}^2\abs{b_1}^2\]
+Suppose Cauchy's inequality holds for \(n\). Then,
+\begin{align*}
+	\abs{\sum_{i=1}^{n+1} a_ib_i}^2&\leq \abs{\sum_{i=1}^n a_ib_i}^2+\abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
+				       &\leq \sum_{i=1}^{n}\abs{a_i}^2\sum_{i=1}^{n}\abs{b_i}^2+\abs{a_{n+1}}^2\abs{b_{n+1}}^2\\
+				       &\leq \sum_{i=1}^{n}\abs{a_i}^2\sum_{i=1}^{n}\abs{b_i}^2+\abs{a_{n+1}}^2\abs{b_{n+1}}^2+\abs{a_{n+1}}\sum_{i=1}^{n}\abs{b_i}^n + \abs{b_{n+1}}^2\sum_{i=1}^n\abs{a_i}^2\\
+				       &=\sum_{i=1}^{n+1}\abs{a_i}^2\sum_{i=1}^{n+1}\abs{b_i}^2
+\end{align*}
+so it also holds for \(n+1\). Thus, Cauchy's inequality holds for all \(n\in \N\).
+\subsubsection{}
+\begin{align*}
+	\abs{\sum_{i=1}^n\lambda_ia_i}&\leq\sum_{i=1}^n\abs{\lambda_ia_i}\\
+				      &=\sum_{i=1}^n\lambda_{i}\abs{a_i}\\
+				      &\leq\sum_{i=1}^n\lambda_i\\
+				      &=1
+\end{align*}
+\subsubsection{}
+By the the parallelogram rule and triangle inequalities,
+\[4\abs{c}^2 = \abs{z-a}^2+\abs{z+a}^2+2\abs{z^2-a^2} = 2\abs{z}^2+2\abs{a}^2+2\abs{z^2-a^2}\geq  4\abs{a}^2\]
+or
+\[\abs{c}\geq \abs{a}\]
+Thus, there are only solutions for \(\abs{a}\leq \abs{c}\). There are two solutions given by the pair of equations 
+\[\abs{z-a}=\abs{c}\qquad\qquad \abs{z+a}=\abs{c}\]
+which yield
+\[z = \pm i \frac{a}{\abs{a}}\sqrt{\abs{{c}}^2-\abs{a}^2}\]
+thus, for \(\abs{a}\leq\abs{c}\) solutions exist. \(\abs{z}\) is bounded above by \(\abs{c}\) like \(\abs{a}\), but can go to zero.
+
+The actual bounds seem too hard to think about right now.
 \section{The Geometric Representation of Complex Numbers}
 \subsection{Geometric Addition and Multiplication}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
 \subsection{The Binomial Equation}
+\subsubsection{}
+From de Moivre's,
+\[\cos3\phi = \cos^3\phi - 3\cos\phi\sin^2\phi\]
+\[\cos4\phi = \cos^4\phi - 6\cos^2\phi\sin^2\phi+\sin^4\phi\]
+\[\sin5\phi = \sin^5\phi-10\sin^3\phi\cos^2\phi+5\sin\phi\cos^4\phi\]
+\subsubsection{}
+Note we can add the two terms, 
+\[\Sigma=1+\cos\varphi+i\sin\varphi+\cdots = 1+e^{i\varphi}+e^{2i\varphi}+\cdots+e^{ni\varphi}\]
+yielding
+\[\Sigma = \frac{1-e^{in\varphi}}{1-e^{i\phi}} = e^{i\frac{n-1}{2}\phi}\frac{e^{i\frac{n}{2}\phi}-e^{-i\frac{n}{2}\phi}}{e^{-i\phi/2}-e^{-i\phi/2}} = e^{i\frac{n-1}{2}\phi}\frac{\sin\frac{n\phi}{2}}{\sin\frac{\phi}{2}}\]
+The cosine terms are the real part of this,
+\[\sum_{m=1}^n\cos{m\phi} = \Re\Sigma = \cos\frac{n-1}{2}\phi\frac{\sin\frac{n\phi}{2}}{\sin\frac{\phi}{2}}\]
+and the sine terms are the imaginary part of this,
+\[\sum_{m=1}^n\sin{m\phi} = \Im\Sigma = \sin\frac{n-1}{2}\phi\frac{\sin\frac{n\phi}{2}}{\sin\frac{\phi}{2}}\]
+\subsubsection{}
+\subsubsection{}
+\[1+\omega^h+\cdots+\omega^{(n-1)h} = \frac{1-\omega^{nh}}{1-\omega^h}=\frac{1-1^h}{1-\omega^h}=0\]
+if \(h\) is not divisible by \(n\).
+\subsubsection{}
+\[1-\omega^h+\cdots+(-1)^{n-1}\omega^{(n-1)h} = \frac{1-(-1)^n\omega^{nh}}{1+\omega^h}=\frac{1-(-1)^n1^h}{1+\omega^h}=\frac{1-(-1)^{n}}{1+\omega^h}\]
 \subsection{Analytic Geometry}
+\subsubsection{}
+When \(a=\pm b\). See 1.1.4.4.
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+Fix the circle to be at the origin, and set the chords to be between pairs \(z,\bar z\). The midpoints lie on the line \(\Im(z) =0\), which is a diameter, and perpendicular to the chords.
+\subsubsection{}
 \subsection{The Spherical Representation}
+\subsubsection{}
+Let
+\[z = \frac{x_1+ix_2}{1-x_3}\qquad z' = \frac{-x_1-ix_2}{1-x_3}\]
+then,
+\[z\bar z' = \frac{-x_1^2-x_2^2}{1-x_3^2}=\frac{-x_1^2-x_2^2}{x_1^2+x_2^2} = -1\]
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}

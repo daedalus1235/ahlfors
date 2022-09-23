@@ -8,9 +8,42 @@
 \subsubsection{}
 \subsubsection{}
 \subsubsection{do this}
-Suppose \(f(z)\) is analytic and \(\abs{f(z)}=k\,\forall z\in\C\).
+Suppose \(f(z)\) is analytic and WLOG that \(\abs{f(z)}=1\,\forall z\in\C\).
+Write
+\[f(z)=u(x,y)+v(x,y)\qquad\qquad z=x+iy\]
+Then, we have 
+\[u^2+v^2=1\]
+\[\del^2u=\del^2v=0\]
+and the Cauchy-Riemann equations
+\[\pder{u}{x} =\pder{v}{y}\qquad\pder{v}{x}=-\pder{u}{y}\]
+Taking the derivatives of \(\abs{f(z)}^2=1\), we find
+\[\left(\pder{u}{x}\right)^2+u\pder{^2u}{x^2}+v\pder{^2v}{x^2}+\left(\pder{v}{x}\right)^2=0\]
+\[\left(\pder{u}{y}\right)^2+u\pder{^2u}{y^2}+v\pder{^2v}{y^2}+\left(\pder{v}{y}\right)^2=0\]
+Adding together and using the harmonicity of \(u\) and \(v\) to simplify,
+\[\left(\pder{u}{x}\right)^2+\left(\pder{u}{y}\right)^2+\left(\pder{v}{x}\right)^2+\left(\pder{v}{y}\right)^2=0\]
+Usign the Cauchy-Riemann equations, we have
+\[\left(\pder{u}{x}\right)^2 = \left(\pder{v}{y}\right)\qquad\qquad\left(\pder{u}{y}\right)^2=\left(\pder{v}{x}\right)^2\]
+so we can simplify to find that
+\[\left(\pder{u}{x}\right)^2+\left(\pder{u}{y}\right)^2=0\]
+so
+\[\abs{f'(z)}^2=0\then f'(z)=0\]
+or \(f(z)\) must be a constant.
 \subsubsection{do this}
-WLOG, suppose \(f(z)\) is analytic. 
+Suppose \(f(z)\) is analytic. It has a derivative characterized by the existence of 
+\[\pder{u}{x},\pder{u}{y},\pder{v}{x},\pder{v}{y}\]
+which satisfy the Cauchy-Riemann equations
+\[\pder{u}{x}=\pder{v}{y}\qquad \pder{v}{x} = -\pder{u}{y}\]
+we can thus write 
+\[\der{f}{z} = \pder{u}{x}+i\pder{v}{x}\]
+Let 
+\[\bar f (\bar z) = u-iv = u+iv'(x,y')\]
+where \(v'=-v\) and \(y' = -y\).
+To show that \(\bar f(\bar z)\) is analytic, we need only show that \(u\) and \(v'(x,y')\) are harmonic conjugates. First, we show that \(v'\) is harmonic:
+\[\del^2v'=\pder{^2v'}{x^2}+\pder{}{y}\pder{v'}{y} = \pder{^2v}{x^2}+\pder{}{y}\pder{v}{y}=\del^2v=0\]
+now we must show that \(v'\) is conjugate to \(u\); that is it satisfies the Cauchy-Riemann equations. We saw that we can write
+\[\pder{v'}{x}=\pder{v}{x} =-\pder{u}{y}\]
+\[\pder{v'}{y}=\pder{v}{y} =\pder{u}{x}\]
+thus \(f(z)\) is analytic iff \(\bar f(\bar z)\) is analytic.
 \subsubsection{}
 \subsubsection{optional}
 Suppose \(u(x,y)\) is harmonic; that is \(\pd_x^2 u + \pd_y^2 u = 0\). We write the ``change of coordinates''
@@ -43,11 +76,34 @@ because mixed partials are probably symmetric for harmonic functions.
 
 \subsection{Uniform Convergence}
 \subsubsection{do this}
+A sequence \(\{a_n\}\) converges to \(a\) iff \(\forall\varepsilon>0\,\exists N\) s.t. \(\abs{a-a_n}<\varepsilon\,\forall n\geq N\). Fix \(N\) such that it satisfies \(\varepsilon=1\). The sequence \(\{a_n\}\) is then bounded by
+\[r=\max(1,\abs{a-a_1},\ldots,\abs{a-a_N})\]
 \subsubsection{optional}
 \subsubsection{}
 \subsubsection{}
 \subsubsection{}
 \subsubsection{do this}
+Let 
+\[U_n = \sum_{i=1}^n u_i\qquad\qquad V_n = \sum_{i=1}^n v_i\]
+and WLOG let \(U\) converge absolutely. 
+Let 
+\[P_n=U_nV_n=\sum_{i=1}^np_i\]
+where
+\[p_n = \sum_{i=1}^{n-1} u_i v_{n-i}\]
+we thus want to show that \(P_n\) converges to some \(P\).
+
+Let \(\delta_n = V_n-V\). Then, we can rewrite
+\begin{align*}
+	P_n &= u_1v_1 + (u_1v_2 + u_2v_1) + (u_1v_3+u_2v_2+u_3v_1)+\cdots\\
+	&= u_1 V_n + u_2 V_{n-1} + \cdots+ u_n V_1\\
+	&=u_1(V+\delta_n)+\cdots + u_n (V+\delta_1)\\
+	&= U_nV + u_1\delta_n + u_2\delta_{n-1}+\cdots u_n\delta_1
+\end{align*}
+Let \(R = u_1\delta_n + \cdots + u_n \delta_1\). Because \(V\) converges, \(\delta_n\to 0\). Choose \(N\) such that \(\delta_{n}<\epsilon\) for \(n\geq N\). Then, 
+\begin{align*}
+	\abs{R} = \abs{u_n\delta_1+\cdots+u_N\delta_{n+1-N}+u_{N-1}\delta_{n-N}+\cdots+}
+\end{align*}
+
 
 \subsection{Power Series}
 \subsubsection{}
